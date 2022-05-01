@@ -15,9 +15,8 @@ class MenuController extends Controller
     public function index()
     {
         //dua du lieu ra ngoai
-        $menu = Menu::where('parent_id', null)->get();
-        $menuAll = Menu::all();
-        return view('welcome',compact('menu', 'menuAll'));
+        $menu = Menu::all();
+        return view('welcome',compact('menu'));
        
     }
 
